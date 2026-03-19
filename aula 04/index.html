@@ -1,33 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>aula 04</title>
 </head>
+
 <body>
-    <h1>Pricipais Formatações</h1>
-    <h2>Negrito / Destaque</h2>
-    <p>Na frase temos uma <b>parte do texto em negrito</b> usando a tag B(não semântica) </p>
-    <br>
-    <p>Na frase temos uma <strong>parte do texto em negrito</strong> usando a tag strong</p>
+    <h1>Principais Formatações</h1>
+    <h2>Negrito/Destaque</h2>
+    <p>Na frase temos uma <b>parte em negrito</b> usando a tag b (não semantica)</p>
+    <p>Na frase temos uma <strong>parte em negrito</strong>usando a tag strong (com semantica)</p>
 
-    <h2>Itálico / Ênfase</h2>
-    <p>Nesta frase vamos entrar com uma palavra em <i>itálico</i> usando a tag i (não semantica)</p>
-    <p>Nesta frase vamos entrar com uma palavra em <em>itálico</em> usando a tag (com semântica)</p>
+    <h2>Itálico/Ênfase</h2>
+    <p>Nesta frase vamos entrar com uma palavra em <i>itálico</i>usando a tag i (não semantica)</p>
+    <p>Nesta frase vamos entrar com uma palavra em <em>itálico</em>usando a tag em (com semantica)</p>
 
-    <h2>Texto Marcador</h2>
-    <p>Aqui vamos usar um texto com destaque <mark style="background-color: green;">marcador de texto</mark>usando mark</p>
-    <p>Aqui vamos usar um texto com destaque <mark style="background-color: yellow;">marcador de texto</mark>usando mark</p>
+    <h2>Texto marcador</h2>
+    <p>Aqui vamos usar um texto em destaque <mark style="background-color: green;">de marcador de texto</mark> usando
+        mark</p>
+    <p>Aqui vamos usar um texto em destaque <mark>marcador de texto</mark>usando mark</p>
 
     <h2>Texto grande e pequeno</h2>
-    <p>estamos trabalhando aqui com um <big>texto grande</big> e um <small>texto pequeno</small> nesta frase</p>
-    
+    <p>Estamos trabalhando aqui com um <span style="font-size: larger;">texto maior</span> e um <small> texto
+            menor</small> nesta frase</p>
+
     <h2>Texto deletado</h2>
-    <p>Neste paragrafo vamos trabalhar com um texto <s>que foi exclído</s> na frase de forma não semantica</p>
+    <p>Neste parágrafo iremos trabalhar com <s>texto que foi excluído</s> da frase (forma semântica)</p>
 
+    <h2>Texto inserido</h2>
+    <p>Nesta frase vamos demonstrar <ins>destacar um texto inserido</ins> na frase de forma semantica</p>
+    <p>Nesta frase vamos demonstrar como <u>destacar um texto inserido</u> na frase de forma não semantica</p>
 
+    <h2>Texto sobrescrito</h2>
+    <p>Estamos trabalhando aqui com um <sup>texto sobrescrito</sup> nesta frase</p>
 
+    <h2>Texto subscrito</h2>
+    <p>estamos trabalhando aqui com um <sub>texto subscrito</sub> netsa frase</p>
 
+    <h2>Trecho de código fonte</h2>
+    <p>Neste exemplo vou demonstrar um trecho de código</p>
+    <p>Inserido um longo código de python</p>
+
+    <pre>
+<code>
+    import math
+
+    def resolver_equacao_segundo_grau(a,b,c):
+         if a == 0:
+            return "Não é equação de segundo grau(a deve ser diferente de 0)"
+
+        delta = b**2 - 4*a*c
+
+        if delta < 0:
+            return "A equação não possui raízes reais"
+        elif delta == 0:
+            x = -b / (2*a)
+            return f"A equação possui uma raíz real: x = {x}"
+        else:
+            x1 = (-b + math.sqrt(delta)) / (2*a)
+            x2 = (-b - math.sqrt(delta)) / (2*a)
+            return f"A equação possui duas raízes reais: x1 = {x1}, x2 = {x2}"
+
+        # Exemplo de uso:
+        a = float(input("Digite o valor de a:"))
+        b = float(input("Deigite o valor de b:"))
+        c = float(input("Digite o valor de c:"))
+
+        resultado = resolver_equacao_segundo_grau(a,b,c)
+        print(resultado)
+
+</code>
+    </pre>
+
+    <h2>Citações (quotation) simples</h2>
+    <p>Segundo Steve Jobs "A tecnologia move o mundo"</p>
+
+    <h2>Citações completas (livros)</h2>
+    <p>Segundo Sandra Kussonoki no seu livro A dança e o ventre:</p>
+    <blockquote>
+        <p>Dados existentes sobre intervenções cirúrgicas nos corpos contemporâneos visando a obtenção de um corpo mais
+            próximo do padrão estético </p>
+        <p>Tais como a lipoaspiração, próteses de silicone, entre outras, comprovam essa busca obsessiva pelo ideal de
+            perfeição, que é buscado principalmente por magreza</p>
+    </blockquote>
+
+    <h2>Abreviações</h2>
+    <p>Estamos estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr
+            title="Cascading Style Sheets">CSS</abbr></p>
+
+    <h2>Texto invertido</h2>
+    <p>Estamos estudando HTML</p>
+    <p><bdo dir="rtl">Estou estudando HTML</bdo></p>
 </body>
+
 </html>
