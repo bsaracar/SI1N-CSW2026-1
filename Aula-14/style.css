@@ -1,0 +1,22 @@
+.corpo {
+
+ display: flex;   
+ justify-content: center;
+}
+
+
+.spotify:hover{
+
+    background-color: pink;
+  
+}
+
+.youtube:hover {
+
+    background-color: palevioletred;
+}
+
+.amazon:hover {
+    background-color: hotpink;
+}
+
