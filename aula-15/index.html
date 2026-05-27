@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Idade</title>
+    <style>
+        /* Estilização básica para deixar a tela bonita e centralizada */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #ecb5e5;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #f17cad;
+        }
+        h2 {
+            color: #f090b0;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Descubra sua Idade</h3>
+        
+        <input type="number" id="anoNascimento" placeholder="Digite o ano de nascimento">
+        <br>
+        
+        <button onclick="calcularIdade()">Calcular</button>
+        
+        <h2 id="resultado">Você tem: -- anos</h2>
+    </div>
+
+    <script>
+        function calcularIdade() {
+            // 1. Pegar o valor digitado no input
+            let anoNascimento = document.getElementById('anoNascimento').value;
+            
+            // 2. Pegar o ano atual do sistema automaticamente
+            let anoAtual = new Date().getFullYear();
+            
+            // 3. Validação simples para não deixar o campo vazio ou com anos absurdos
+            if (anoNascimento === "" || anoNascimento > anoAtual || anoNascimento < 1900) {
+                document.getElementById('resultado').innerText = "Por favor, digite um ano válido!";
+                return; // Para a execução aqui
+            }
+
+            // 4. Fazer o cálculo
+            let idade = anoAtual - anoNascimento;
+
+            // 5. Exibir o resultado na tela substituindo o texto do H2
+            document.getElementById('resultado').innerText = "Você tem " + idade + " anos";
+        }
+    </script>
+
+</body>
+</html>
